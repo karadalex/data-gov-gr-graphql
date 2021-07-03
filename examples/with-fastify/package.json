@@ -1,0 +1,15 @@
+{
+  "name": "with-fastify",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.18.1",
+    "fastify-express": "^0.3.3"
+  }
+}
