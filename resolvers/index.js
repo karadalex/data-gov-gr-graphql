@@ -1,7 +1,7 @@
 const resolvers = {
   Query: {
     admie_dailyenergybalanceanalysis: (parent, args, context) => {
-      return [
+      let data = [
         {
           energy_mwh: 15143,
           percentage: 0.09381989405532666,
@@ -39,6 +39,12 @@ const resolvers = {
           fuel: "ΣΥΝΟΛΟ",
         },
       ];
+
+      if (args.query.fuel) {
+        data = data.filter(obj => obj.fuel === args.query.fuel)
+      }
+
+      return data
     },
   },
 };
