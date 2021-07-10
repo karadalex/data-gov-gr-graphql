@@ -14,7 +14,7 @@ const indexDefs = gql`
     admie_realtimescadasystemload(query: DateRangeInput): [RealtimeScada],
 
     # MDG
-    mdg_emvolio(query: DateRangeInput): [VaccinationDataPoint]
+    mdg_emvolio(query: VaccinationQuery): [VaccinationDataPoint]
   }
 `
 

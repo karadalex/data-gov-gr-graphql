@@ -1,6 +1,12 @@
 const gql = require("apollo-server-micro").gql;
 
 module.exports = gql`
+  input VaccinationQuery {
+    date_from: Date,
+    date_to: Date,
+    area: String
+  }
+
   type VaccinationDataPoint {
     area: String,
     areaid: Int,

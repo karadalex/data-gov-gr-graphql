@@ -26,8 +26,8 @@ async function mdg_emvolio(parent, args, context) {
   let data = await response.json();
 
   if (args.query) {
-    if (args.query.fuel) {
-      data = data.filter((obj) => obj.fuel === args.query.fuel);
+    if (args.query.area) {
+      data = data.filter((obj) => obj.area === args.query.area);
     }
   }
 
