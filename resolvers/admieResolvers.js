@@ -11,7 +11,19 @@ module.exports = {
         headers: headers
       };
 
-      const response = await fetch("https://data.gov.gr/api/v1/query/admie_dailyenergybalanceanalysis", requestOptions)
+      let url = "https://data.gov.gr/api/v1/query/admie_dailyenergybalanceanalysis"
+
+      if (args.query) {
+        url += "?"
+        if (args.query.date_from) {
+          url += `date_from=${args.query.date_from.split("T")[0]}&`
+        }
+        if (args.query.date_to) {
+          url += `date_to=${args.query.date_to.split("T")[0]}`
+        }
+      }
+
+      const response = await fetch(url, requestOptions)
       let data = await response.json()
   
       if (args.query) {

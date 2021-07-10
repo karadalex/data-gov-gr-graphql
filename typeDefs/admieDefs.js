@@ -3,8 +3,8 @@ const gql = require('apollo-server-micro').gql
 
 module.exports = gql`
   input EnergyBalanceInput {
-    from_date: String,
-    to_date: String,
+    date_from: String,
+    date_to: String,
     fuel: String,
   }
 
