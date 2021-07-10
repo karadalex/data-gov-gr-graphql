@@ -1,4 +1,5 @@
 const gql = require('apollo-server-micro').gql
+const admieDefs = require('./admieDefs')
 
 const indexDefs = gql`
   scalar JSON
@@ -8,21 +9,8 @@ const indexDefs = gql`
   type Query {
     admie_dailyenergybalanceanalysis(query: EnergyBalanceInput): [EnergyBalanceDataPoint]
   }
-
-  input EnergyBalanceInput {
-    from_date: String,
-    to_date: String,
-    fuel: String,
-  }
-
-  type EnergyBalanceDataPoint {
-    energy_mwh: Int,
-    percentage: Float,
-    date: String,
-    fuel: String,
-  }
 `
 
 module.exports = [
-  indexDefs
+  indexDefs, admieDefs
 ]
