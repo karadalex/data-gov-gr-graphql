@@ -16,3 +16,14 @@ query {
   }
 }
 ```
+
+```graphql
+query {
+  admie_realtimescadares(query: {
+    date_from: "2021-06-29T00:00:00Z",
+    date_to: "2021-06-30T23:00:00Z"
+  }) {
+    energy_mwh
+  }
+}
+```

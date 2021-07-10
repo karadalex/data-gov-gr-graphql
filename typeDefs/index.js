@@ -7,7 +7,8 @@ const indexDefs = gql`
   scalar Date
 
   type Query {
-    admie_dailyenergybalanceanalysis(query: EnergyBalanceInput): [EnergyBalanceDataPoint]
+    admie_dailyenergybalanceanalysis(query: EnergyBalanceInput): [EnergyBalanceDataPoint],
+    admie_realtimescadares(query: DateRangeInput): [RealtimeScadaRES]
   }
 `
 
