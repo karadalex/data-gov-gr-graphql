@@ -61,10 +61,38 @@ async function admie_realtimescadares(parent, args, context) {
   return data;
 }
 
+async function admie_realtimescadasystemload(parent, args, context) {
+  var headers = new Headers();
+  headers.append("Authorization", `Token ${token}`);
+
+  var requestOptions = {
+    method: "GET",
+    headers: headers,
+  };
+
+  let url = "https://data.gov.gr/api/v1/query/admie_realtimescadasystemload";
+
+  if (args.query) {
+    url += "?";
+    if (args.query.date_from) {
+      url += `date_from=${args.query.date_from}&`;
+    }
+    if (args.query.date_to) {
+      url += `date_to=${args.query.date_to}`;
+    }
+  }
+
+  const response = await fetch(url, requestOptions);
+  let data = await response.json();
+
+  return data;
+}
+
 
 module.exports = {
   Query: {
     admie_dailyenergybalanceanalysis,
-    admie_realtimescadares
+    admie_realtimescadares,
+    admie_realtimescadasystemload
   },
 };

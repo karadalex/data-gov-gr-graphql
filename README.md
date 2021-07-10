@@ -46,4 +46,4 @@ query {
 
 - [x] admie_dailyenergybalanceanalysis
 - [x] admie_realtimescadares
-- [ ] admie_realtimescadasystemload
+- [x] admie_realtimescadasystemload

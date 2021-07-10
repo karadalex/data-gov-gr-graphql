@@ -8,7 +8,8 @@ const indexDefs = gql`
 
   type Query {
     admie_dailyenergybalanceanalysis(query: EnergyBalanceInput): [EnergyBalanceDataPoint],
-    admie_realtimescadares(query: DateRangeInput): [RealtimeScadaRES]
+    admie_realtimescadares(query: DateRangeInput): [RealtimeScada],
+    admie_realtimescadasystemload(query: DateRangeInput): [RealtimeScada],
   }
 `
 

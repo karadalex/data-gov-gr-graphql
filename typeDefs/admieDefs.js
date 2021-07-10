@@ -20,7 +20,7 @@ module.exports = gql`
     fuel: String,
   }
 
-  type RealtimeScadaRES {
+  type RealtimeScada {
     date: Date,
     energy_mwh: Float
   }
