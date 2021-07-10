@@ -36,14 +36,14 @@ query {
 
 ## Features
 
-[x] Apollo GraphQL Server
-[x] NextJS example
-[ ] ExpressJS example
-[ ] FastifyJS example
-[ ] API Caching
+- [x] Apollo GraphQL Server
+- [x] NextJS example
+- [ ] ExpressJS example
+- [ ] FastifyJS example
+- [ ] API Caching
 
 ## Datasets supported
 
-[x] admie_dailyenergybalanceanalysis
-[x] admie_realtimescadares
-[ ] admie_realtimescadasystemload
+- [x] admie_dailyenergybalanceanalysis
+- [x] admie_realtimescadares
+- [ ] admie_realtimescadasystemload
