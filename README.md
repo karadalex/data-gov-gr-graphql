@@ -1,4 +1,4 @@
-data-gov-gr-api-express
+data-gov-gr-graphql
 =======================
 
 An unofficial GraphQL implementation of the data.gov.gr API
