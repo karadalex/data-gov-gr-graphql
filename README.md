@@ -10,6 +10,7 @@ TODO
 
 ## Example Queries
 
+Daily Energy Balance
 ```graphql
 query {
   admie_dailyenergybalanceanalysis(query: {
@@ -23,6 +24,7 @@ query {
 }
 ```
 
+Realtime SCADA data from Renewable Energy Sources
 ```graphql
 query {
   admie_realtimescadares(query: {
@@ -30,6 +32,19 @@ query {
     date_to: "2021-06-30T23:00:00Z"
   }) {
     energy_mwh
+  }
+}
+```
+
+COVID-19 Vaccinations query
+```graphql
+query {
+  mdg_emvolio(query: {
+    date_from: "2021-06-29T00:00:00Z",
+    date_to: "2021-06-30T23:00:00Z"
+  }) {
+    area
+    totalvaccinations
   }
 }
 ```
@@ -47,3 +62,4 @@ query {
 - [x] admie_dailyenergybalanceanalysis
 - [x] admie_realtimescadares
 - [x] admie_realtimescadasystemload
+- [x] mdg_emvolio (Vaccination statistics)
