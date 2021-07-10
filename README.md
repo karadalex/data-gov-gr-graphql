@@ -1,5 +1,11 @@
-# data-gov-gr-api-express
+data-gov-gr-api-express
+=======================
+
 An unofficial GraphQL implementation of the data.gov.gr API
+
+## Getting Started
+
+TODO
 
 
 ## Example Queries
@@ -27,3 +33,17 @@ query {
   }
 }
 ```
+
+## Features
+
+[x] Apollo GraphQL Server
+[x] NextJS example
+[ ] ExpressJS example
+[ ] FastifyJS example
+[ ] API Caching
+
+## Datasets supported
+
+[x] admie_dailyenergybalanceanalysis
+[x] admie_realtimescadares
+[ ] admie_realtimescadasystemload
