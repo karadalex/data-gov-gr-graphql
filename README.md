@@ -66,3 +66,4 @@ query {
 - [x] admie_realtimescadares
 - [x] admie_realtimescadasystemload
 - [x] mdg_emvolio (Vaccination statistics)
+- [x] electricity_consumption

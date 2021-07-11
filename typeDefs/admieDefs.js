@@ -8,11 +8,6 @@ module.exports = gql`
     fuel: String,
   }
 
-  input DateRangeInput {
-    date_from: Date,
-    date_to: Date,
-  }
-
   type EnergyBalanceDataPoint {
     energy_mwh: Int,
     percentage: Float,

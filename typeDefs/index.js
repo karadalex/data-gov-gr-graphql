@@ -1,11 +1,23 @@
 const gql = require('apollo-server-micro').gql
 const admieDefs = require('./admieDefs')
+const dedieDefs = require('./dedieDefs')
 const mdgDefs = require('./mdgDefs')
 
 const indexDefs = gql`
   scalar JSON
   scalar BigInt
   scalar Date
+
+  input DateRangeInput {
+    date_from: Date,
+    date_to: Date,
+  }
+
+  input DateRangeAreaQuery {
+    date_from: Date,
+    date_to: Date,
+    area: String
+  }
 
   type Query {
     # ADMIE
@@ -14,10 +26,13 @@ const indexDefs = gql`
     admie_realtimescadasystemload(query: DateRangeInput): [RealtimeScada],
 
     # MDG
-    mdg_emvolio(query: VaccinationQuery): [VaccinationDataPoint]
+    mdg_emvolio(query: DateRangeAreaQuery): [VaccinationDataPoint]
+
+    # DEDIE
+    electricity_consumption(query: DateRangeAreaQuery): [ElectricityConsumption]
   }
 `
 
 module.exports = [
-  indexDefs, admieDefs, mdgDefs
+  indexDefs, admieDefs, mdgDefs, dedieDefs
 ]
